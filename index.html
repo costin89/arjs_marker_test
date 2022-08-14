@@ -21,13 +21,13 @@
 
             // do what you want with the distance:
             cameraRot = camera.object3D.rotation;
-            cameraRot2 = camera.object3D.getAttribute('rotation')
+            markerRot = marker.object3D.rotation;
             console.log("Position");
             console.log(markerPosition);
             console.log(cameraPosition);
             console.log("Rotation");
             console.log(cameraRot);
-            console.log(cameraRot2);
+            console.log(markerRot);
             console.log(distance);
         }, 100);
     });
