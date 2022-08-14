@@ -20,10 +20,9 @@
             distance = cameraPosition.distanceTo(markerPosition)
 
             // do what you want with the distance:
-            markerPos = marker.object3D.getWorldPosition();
-            markerQuat = marker.object3D.getWorldQuaternion();
-            console.log(markerPos);
-            console.log(markerQuat);
+            cameraRot = marker.object3D.rotation;
+            console.log(cameraPosition);
+            console.log(cameraRot);
             console.log(distance);
         }, 100);
     });
