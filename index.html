@@ -20,7 +20,10 @@
             distance = cameraPosition.distanceTo(markerPosition)
 
             // do what you want with the distance:
-            //markerRot = marker.object3D.rotation;
+            markerRot = marker.object3D.rotation;
+            markerPos = marker.object3D.position;
+            console.log(markerRot);
+            console.log(markerPos);
             console.log(distance);
         }, 100);
     });
@@ -32,9 +35,9 @@
 </script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-     <a-marker-camera type='pattern' url='pattern-openfree3dscan.patt'>
+     <a-marker type='pattern' url='pattern-openfree3dscan.patt'>
         <a-box position='0 0 0' scale='1.0 1.0 1.0' material='color: red;'></a-box>
-      </a-marker-camera>
+      </a-marker>
     <a-entity camera></a-entity>
     </a-scene>
   </body>
