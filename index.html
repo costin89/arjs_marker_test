@@ -4,7 +4,6 @@
   <!-- we import arjs version without NFT but with marker + location based support -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <script>
-  var distance;
   window.addEventListener('load', () => {
     const camera = document.querySelector('[camera]');
     const marker = document.querySelector('a-marker');
@@ -13,7 +12,7 @@
     marker.addEventListener('markerFound', () => {
         let cameraPosition = camera.object3D.position;
         let markerPosition = marker.object3D.position;
-        distance = cameraPosition.distanceTo(markerPosition)
+        let distance = cameraPosition.distanceTo(markerPosition)
 
         check = setInterval(() => {
             cameraPosition = camera.object3D.position;
@@ -26,6 +25,8 @@
             console.log(markerRot);
             console.log(markerPos);
             console.log(distance);
+            var text = document.querySelector('#DISTANCE:')
+            text.setAttribute('value', distance)
         }, 100);
     });
 
@@ -38,7 +39,7 @@
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
      <a-marker type='pattern' url='pattern-openfree3dscan.patt'>
-       <a-text value= "DISTANCE: " + distance rotation="-90 0 0"></a-text>
+       <a-text id= "DISTANCE:" rotation="-90 0 0"></a-text>
       </a-marker>
     <a-entity camera></a-entity>
     </a-scene>
