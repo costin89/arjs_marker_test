@@ -14,14 +14,14 @@
         let cameraPosition = camera.object3D.position;
         let markerPosition = marker.object3D.position;
         let distance = cameraPosition.distanceTo(markerPosition)
-        let a /= Math.pow(distance, 1);
+        let a /= Math.pow(distance, 1)
         let texts = tex.setAttribute('value', a)
 
         check = setInterval(() => {
             cameraPosition = camera.object3D.position;
             markerPosition = marker.object3D.position;
             distance = cameraPosition.distanceTo(markerPosition)
-            a /= Math.pow(distance, 1);
+            a /= Math.pow(distance, 1)
             texts = tex.setAttribute('value', a)
 
             // do what you want with the distance:
