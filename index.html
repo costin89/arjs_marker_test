@@ -37,9 +37,9 @@
   <canvas id="myCanvas" width="200" height="100"></canvas>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
+     <a-text value="ABCあいうえお日本語" font="custom-msdf.json" font-image="custom-msdf.png" negate="false" scale="2 2 1" position="-2 2 -4"></a-text>
      <a-marker type='pattern' url='pattern-openfree3dscan.patt'>
         <a-box position='0 0 0' scale='1.0 1.0 1.0' material='color: red;'></a-box>
-       <a-text value=distance font="custom-msdf.json" font-image="custom-msdf.png" negate="false" scale="2 2 1" position="-2 2 -4"></a-text>
       </a-marker>
     <a-entity camera></a-entity>
     </a-scene>
