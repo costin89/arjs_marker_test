@@ -19,12 +19,7 @@
             cameraPosition = camera.object3D.position;
             markerPosition = marker.object3D.position;
             distance = cameraPosition.distanceTo(markerPosition)
-
-            // do what you want with the distance:
-            markerRot = marker.object3D.rotation;
-            markerPos = marker.object3D.position;
-            console.log(markerRot);
-            console.log(markerPos);
+          
             console.log(distance);
             tex.setAttribute('value', distance)
           
