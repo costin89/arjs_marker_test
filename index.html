@@ -14,15 +14,16 @@
         let cameraPosition = camera.object3D.position;
         let markerPosition = marker.object3D.position;
         let distance = cameraPosition.distanceTo(markerPosition)
+        let texts = tex.setAttribute('value', distance)
 
         check = setInterval(() => {
             cameraPosition = camera.object3D.position;
             markerPosition = marker.object3D.position;
             distance = cameraPosition.distanceTo(markerPosition)
-          
+            texts = tex.setAttribute('value', distance)
+
+            // do what you want with the distance:
             console.log(distance);
-            tex.setAttribute('value', distance)
-          
         }, 100);
     });
 
@@ -30,7 +31,6 @@
       clearInterval(check);
     })
 })
-    }
 </script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs vr-mode-ui="enabled: false">
