@@ -7,6 +7,7 @@
   window.addEventListener('load', () => {
     const camera = document.querySelector('[camera]');
     const marker = document.querySelector('a-marker');
+    const tex = document.querySelector('a-text');
     let check;
 
     marker.addEventListener('markerFound', () => {
@@ -25,6 +26,8 @@
             console.log(markerRot);
             console.log(markerPos);
             console.log(distance);
+            var text = document.querySelector('#dist')
+            text.setAttribute('value', distance)
           
         }, 100);
     });
@@ -37,9 +40,8 @@
 </script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-      vr-mode-ui="enabled: false;"
      <a-marker type='pattern' url='pattern-openfree3dscan.patt'>
-       <a-text id= distance rotation="-90 0 0"></a-text>
+       <a-text id= dist rotation="-90 0 0"></a-text>
       </a-marker>
     <a-entity camera></a-entity>
     </a-scene>
